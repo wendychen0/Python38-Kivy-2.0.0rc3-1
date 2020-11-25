@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "python38kivy200rc3"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+Kivy = "^2.0.0rc3"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.dev-dependencies.Kivy]
+url = "https://kivy.org/downloads/ci/linux/kivy/Kivy-2.0.0rc3-cp38-cp38-manylinux2010_x86_64.whl"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

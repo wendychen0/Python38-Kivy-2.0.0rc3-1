@@ -1,0 +1,370 @@
+WindowManager:
+    id:screen_manager
+
+    MainWindow:   #MAIN page
+        id: main_screen
+        name: "main"
+        manager: screen_manager
+    SecondWindow: #Welcome
+        id: second_screen
+        name:"second"
+        manager: screen_manager
+    ThirdWindow: #CurrentPrescr
+        id: third_screen
+        name:"third"
+        manager: screen_manager
+    FourthWindow: 
+        id: fourth_screen
+        name:"fourth"
+        manager: screen_manager
+    FifthWindow:
+        id: fifth_screen
+        name: "fifth"
+        manager: screen_manager
+    SixthWindow:
+        id: sixth_screen
+        name: "sixth"
+        manager: screen_manager
+
+
+<MainWindow>:
+    nameper: name
+
+    GridLayout:
+        cols: 1
+        padding: [10,10]
+        spacing: [10,10]
+        #title
+        Label:
+            bold: True
+            italic: True
+            font_size: 50
+            color: 0.9,0.4,0.9
+            text: "Main Menu"
+
+        GridLayout:
+            cols:2
+
+            #clock grid    
+            Label:
+                font_size: 35
+                text: "Time: %s" %root.clk
+            Label:
+                font_size: 35
+                text: "Date: %s" %root.dt
+          
+
+        #name grid
+        GridLayout:
+            cols:1
+
+            GridLayout:
+                cols:2
+                Label:
+                    font_size: 35
+                    text: "Type in your name:"
+                TextInput:
+                    id: name
+                    multiline : False
+                    
+        #Submit button            
+        Button:
+            background_normal: ''
+            background_color: [0.9,0.4,0.9,1]
+            bold: True
+            color: 0,0.4,1
+            font_size: 30
+            text: "Submit"
+            on_release:
+                app.root.current = "second" 
+                #root.manager.transition.direction = "left"
+                root.btn()
+                
+                
+        Button:
+            background_normal: ''
+            background_color: [0.9,0.4,0.9,1]
+            bold: True
+            color: 0,0.4,1
+            font_size: 25
+            text: "Help"
+            on_release:
+                root.pop()
+
+
+<SecondWindow>:
+    GridLayout:
+        cols:1
+        padding: [10,10]
+        spacing: [10,10]
+        #title
+        Label:
+            bold: True
+            italic: True
+            font_size: 50
+            color: 0.9,0.4,0.9
+            text: "Welcome Menu"
+        Button: 
+            background_normal: ''
+            background_color: [0.9,0.4,0.9,1]
+            bold: True
+            color: 0,0.4,1
+            font_size: 30 
+            text: "Current Prescriptions"
+            on_release:
+                app.root.current = "third"
+                root.manager.transition.direction = "down"
+
+        Button: 
+            background_normal: ''
+            background_color: [0.9,0.4,0.9,1]
+            bold: True
+            color: 0,0.4,1
+            font_size: 30
+            text: "Add Prescriptions"
+            on_release:
+                app.root.current = "fourth"
+                root.manager.transition.direction = "up"
+        
+        Button:
+            background_normal: ''
+            background_color: [0.9,0.4,0.9,1]
+            bold: True
+            color: 0,0.4,1
+            font_size: 30
+            text: "Alarms"
+            on_release:
+                app.root.current = "sixth"
+                root.manager.transition.direction = "left"
+
+        Button:
+            background_normal: ''
+            background_color: [0.9,0.4,0.9,1]
+            bold: True
+            color: 0,0.4,1
+            font_size: 25
+            text: "Return to Main Menu"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "right"
+
+
+<ThirdWindow>: #CurrentPrescr
+    GridLayout:
+        cols:1
+        padding: [10,10]
+        spacing: [10,10]
+        #title
+        Label:
+            bold: True
+            italic: True
+            font_size: 50
+            color: 0.9,0.4,0.9
+            text: "Current Precriptions"
+            
+        #data    
+        Label :
+            font_size: 35
+            text: "Patient Name: %s" %root.namee
+
+        Label :
+            font_size: 35
+            text: "Prescription Name: %s" %root.perscription
+
+        Label :
+            font_size: 35
+            text: "Additional Info: %s" %root.addinfo
+        
+        Button:
+            background_normal: ''
+            background_color: [0.9,0.4,0.9,1]
+            bold: True
+            color: 0,0.4,1
+            font_size: 25
+            text: "Return to Welcome Menu"
+            on_release:
+                root.manager.transition.direction = "right"
+                app.root.current = "second"
+                
+<FourthWindow>: #Add prescription
+    pname : name
+    pername :  prescription
+    addinormation : additional
+
+    GridLayout:
+        cols:1
+        padding: [10,10]
+        spacing: [10,10]
+        #title
+        Label:
+            bold: True
+            italic: True
+            font_size: 50
+            color: 0.9,0.4,0.9
+            text: "Add Prescription"
+
+        #data    
+        GridLayout:
+            cols:2
+
+            Label:
+                font_size: 35
+                text: "Patient Name:"
+            TextInput:
+                id: name
+                multiline : False
+
+            Label:
+                font_size: 35
+                text: "Prescription Name:"
+            TextInput:
+                id: prescription
+                multiline : False
+
+            Label :
+                font_size: 35
+                text: "Additonal Info:"
+            TextInput:
+                id: additional
+                multiline : True
+
+        Button:
+            background_normal: ''
+            background_color: [0.9,0.4,0.9,1]
+            bold: True
+            color: 0,0.4,1
+            font_size: 30
+            text: "Save info"
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "right"
+                root.btn()
+        Button:
+            background_normal: ''
+            background_color: [0.9,0.4,0.9,1]
+            bold: True
+            color: 0,0.4,1
+            font_size: 25
+            text: "Return to Welcome Menu"
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "left"
+                root.btn()
+
+
+<FifthWindow>: #UserRegristration 
+    pname : name
+    pername :  prescription
+    addinormation : additional
+
+    GridLayout:
+        cols:1
+        padding: [10,10]
+        spacing: [10,10]
+        #title
+        Label:
+            bold: True
+            italic: True
+            font_size: 50
+            color: 0.9,0.4,0.9
+            text: "New User Registration"
+
+        #data    
+        GridLayout:
+            cols:2
+            Label:
+                font_size: 35
+                text: "Patient Name:"
+            TextInput:
+                id: name
+                multiline : False
+
+            Label:
+                font_size: 35
+                text: "Prescription Name:"
+            TextInput:
+                id: prescription
+                multiline : False
+
+            Label:
+                font_size: 35
+                text: "Additonal Info:"
+            TextInput:
+                id: additional
+                multiline : False
+        Button:
+            background_normal: ''
+            background_color: [0.9,0.4,0.9,1]
+            bold: True
+            color: 0,0.4,1
+            font_size: 30
+            text: "Submit"
+            on_release:
+                app.root.current = "main"
+                root.manager.transition.direction = "right"
+                root.btn()          
+    
+    
+<SixthWindow>:
+    alrm_name: alrm_name
+    alrm_time: alrm_time
+    GridLayout:
+        cols:1
+        padding: [10,10]
+        spacing: [10,10]
+        #title
+        Label:
+            bold: True
+            italic: True
+            font_size: 50
+            color: 0.9,0.4,0.9
+            text: "Alarms"
+
+        GridLayout:
+            cols:2
+            Label:
+                font_size: 35
+                text: "New Alarm Name:"
+            TextInput:
+                id: alrm_name
+                multiline: False
+            
+            Label:
+                font_size: 35
+                text: "New Alarm Time:"
+            TextInput:
+                id: alrm_time
+                multiline: False
+          
+        Button:
+            background_normal: ''
+            background_color: [0.9,0.4,0.9,1]
+            bold: True
+            color: 0,0.4,1
+            font_size: 30
+            text: "Save New Alarm"
+            on_release:
+                root.save_alrm()
+
+        Button:
+            background_normal: ''
+            background_color: [0.9,0.4,0.9,1]
+            bold: True
+            color: 0,0.4,1
+            font_size: 30
+            text: "Current Alarms"
+            on_release:
+                root.pop()
+
+        Button:
+            background_normal: ''
+            background_color: [0.9,0.4,0.9,1]
+            bold: True
+            color: 0,0.4,1
+            font_size: 25
+            text: "Return to Welcome Menu"
+            on_release:
+                app.root.current = "second"
+                root.manager.transition.direction = "left"
+                
+

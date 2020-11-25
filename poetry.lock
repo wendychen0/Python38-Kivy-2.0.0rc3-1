@@ -1,0 +1,152 @@
+[[package]]
+category = "main"
+description = "Python package for providing Mozilla's CA Bundle."
+name = "certifi"
+optional = false
+python-versions = "*"
+version = "2020.6.20"
+
+[[package]]
+category = "main"
+description = "Universal encoding detector for Python 2 and 3"
+name = "chardet"
+optional = false
+python-versions = "*"
+version = "3.0.4"
+
+[[package]]
+category = "main"
+description = "Docutils -- Python Documentation Utilities"
+name = "docutils"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "0.16"
+
+[[package]]
+category = "main"
+description = "Internationalized Domain Names in Applications (IDNA)"
+name = "idna"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+version = "2.10"
+
+[[package]]
+category = "main"
+description = "A software library for rapid development of hardware-accelerated multitouch applications."
+name = "kivy"
+optional = false
+python-versions = "*"
+version = "2.0.0rc3"
+
+[package.dependencies]
+Kivy-Garden = ">=0.1.4"
+docutils = "*"
+pygments = "*"
+
+[package.extras]
+base = ["pillow", "docutils", "pygments", "kivy-deps.angle (>=0.2.0,<0.3.0)", "kivy-deps.sdl2 (>=0.2.0,<0.3.0)", "kivy-deps.glew (>=0.2.0,<0.3.0)", "pypiwin32"]
+dev = ["pytest (>=3.6)", "pytest-cov", "pytest-asyncio (!=0.11.0)", "pytest-timeout", "pyinstaller", "sphinx", "sphinxcontrib-blockdiag", "sphinxcontrib-seqdiag", "sphinxcontrib-actdiag", "sphinxcontrib-nwdiag", "flake8"]
+full = ["pillow", "docutils", "pygments", "kivy-deps.gstreamer (>=0.2.0,<0.3.0)", "kivy-deps.angle (>=0.2.0,<0.3.0)", "kivy-deps.sdl2 (>=0.2.0,<0.3.0)", "kivy-deps.glew (>=0.2.0,<0.3.0)", "pypiwin32"]
+tuio = ["oscpy"]
+
+[[package]]
+category = "main"
+description = "Garden tool for kivy flowers."
+name = "kivy-garden"
+optional = false
+python-versions = "*"
+version = "0.1.4"
+
+[package.dependencies]
+requests = "*"
+
+[[package]]
+category = "main"
+description = "Pygments is a syntax highlighting package written in Python."
+name = "pygments"
+optional = false
+python-versions = ">=3.5"
+version = "2.6.1"
+
+[[package]]
+category = "main"
+description = "Python HTTP for Humans."
+name = "requests"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+version = "2.24.0"
+
+[package.dependencies]
+certifi = ">=2017.4.17"
+chardet = ">=3.0.2,<4"
+idna = ">=2.5,<3"
+urllib3 = ">=1.21.1,<1.25.0 || >1.25.0,<1.25.1 || >1.25.1,<1.26"
+
+[package.extras]
+security = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)"]
+socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7)", "win-inet-pton"]
+
+[[package]]
+category = "main"
+description = "HTTP library with thread-safe connection pooling, file post, and more."
+name = "urllib3"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
+version = "1.25.10"
+
+[package.extras]
+brotli = ["brotlipy (>=0.6.0)"]
+secure = ["certifi", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "pyOpenSSL (>=0.14)", "ipaddress"]
+socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7,<2.0)"]
+
+[metadata]
+content-hash = "3a6f277c65e34671fae1a6316e8d80ba4cf3f03355dab3e9cac47522f67792a4"
+python-versions = "^3.8"
+
+[metadata.files]
+certifi = [
+    {file = "certifi-2020.6.20-py2.py3-none-any.whl", hash = "sha256:8fc0819f1f30ba15bdb34cceffb9ef04d99f420f68eb75d901e9560b8749fc41"},
+    {file = "certifi-2020.6.20.tar.gz", hash = "sha256:5930595817496dd21bb8dc35dad090f1c2cd0adfaf21204bf6732ca5d8ee34d3"},
+]
+chardet = [
+    {file = "chardet-3.0.4-py2.py3-none-any.whl", hash = "sha256:fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"},
+    {file = "chardet-3.0.4.tar.gz", hash = "sha256:84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"},
+]
+docutils = [
+    {file = "docutils-0.16-py2.py3-none-any.whl", hash = "sha256:0c5b78adfbf7762415433f5515cd5c9e762339e23369dbe8000d84a4bf4ab3af"},
+    {file = "docutils-0.16.tar.gz", hash = "sha256:c2de3a60e9e7d07be26b7f2b00ca0309c207e06c100f9cc2a94931fc75a478fc"},
+]
+idna = [
+    {file = "idna-2.10-py2.py3-none-any.whl", hash = "sha256:b97d804b1e9b523befed77c48dacec60e6dcb0b5391d57af6a65a312a90648c0"},
+    {file = "idna-2.10.tar.gz", hash = "sha256:b307872f855b18632ce0c21c5e45be78c0ea7ae4c15c828c20788b26921eb3f6"},
+]
+kivy = [
+    {file = "Kivy-2.0.0rc3-cp35-cp35m-manylinux2010_x86_64.whl", hash = "sha256:0b372e03c339bd169e03e884d5f4ec72a2c24ad1429804a607329a67049ea6fa"},
+    {file = "Kivy-2.0.0rc3-cp36-cp36m-manylinux2010_x86_64.whl", hash = "sha256:face9abbf3f11d5627bd8a2ace45207bb26d7854a3a69585c9eb5c785e7d0e82"},
+    {file = "Kivy-2.0.0rc3-cp36-cp36m-win32.whl", hash = "sha256:9a1b419201f92ffeb1b9f1330615c5d7ef15d14c67736695c58bb5c65363fe59"},
+    {file = "Kivy-2.0.0rc3-cp36-cp36m-win_amd64.whl", hash = "sha256:46ec4e9fc81fa3a57e48dc6dd6e5598751eeb7eb21f9c50b1c96897ba269ffef"},
+    {file = "Kivy-2.0.0rc3-cp37-cp37m-manylinux2010_x86_64.whl", hash = "sha256:67fd9e2995afce7400e1eb990320d38e94c88b1c1bc64a7a154e7868c7fa583a"},
+    {file = "Kivy-2.0.0rc3-cp37-cp37m-win32.whl", hash = "sha256:ca449fb55111823b0f71a85b2b6a160f4cad2fab5095300a9bcab49cc15837d6"},
+    {file = "Kivy-2.0.0rc3-cp37-cp37m-win_amd64.whl", hash = "sha256:8e349d534828e3347c1aebda65f97ed512fa18162fe5a798ea45f7fad203435d"},
+    {file = "Kivy-2.0.0rc3-cp38-cp38-manylinux2010_x86_64.whl", hash = "sha256:e30562584929d7287d0678f790d1ea5f7de29455d9de5e8597be597c7299a16a"},
+    {file = "Kivy-2.0.0rc3-cp38-cp38-win32.whl", hash = "sha256:782360462850d3bf4effd4b23279bb1b178b19c15ab8bed56e2baa8b2c69e193"},
+    {file = "Kivy-2.0.0rc3-cp38-cp38-win_amd64.whl", hash = "sha256:b7215130ffb64ee8a8c7ba240af9d2691ab1a49d4f16e592ed6fa4ea4a9f8079"},
+    {file = "Kivy-2.0.0rc3-cp39-cp39-manylinux2010_x86_64.whl", hash = "sha256:84dd2aa2d80517277af4ebc87c365c2816790aa98b04da1fb4efad10a9b2623f"},
+    {file = "Kivy-2.0.0rc3.tar.gz", hash = "sha256:d16770fdacf1c9e032ee1a3f50151f88bd4f94ffd12a7d0b037b0beb4683bfc5"},
+]
+kivy-garden = [
+    {file = "Kivy Garden-0.1.4.tar.gz", hash = "sha256:9b7d9de5efacbcd0c4b3dd873b30622a86093c9965aa47b523c7a32f3eb34610"},
+    {file = "kivy-garden-0.1.4.tar.gz", hash = "sha256:c256f42788421273a08fbb0a228f0fb0e80dd86b629fb8c0920507f645be6c72"},
+]
+pygments = [
+    {file = "Pygments-2.6.1-py3-none-any.whl", hash = "sha256:ff7a40b4860b727ab48fad6360eb351cc1b33cbf9b15a0f689ca5353e9463324"},
+    {file = "Pygments-2.6.1.tar.gz", hash = "sha256:647344a061c249a3b74e230c739f434d7ea4d8b1d5f3721bc0f3558049b38f44"},
+]
+requests = [
+    {file = "requests-2.24.0-py2.py3-none-any.whl", hash = "sha256:fe75cc94a9443b9246fc7049224f75604b113c36acb93f87b80ed42c44cbb898"},
+    {file = "requests-2.24.0.tar.gz", hash = "sha256:b3559a131db72c33ee969480840fff4bb6dd111de7dd27c8ee1f820f4f00231b"},
+]
+urllib3 = [
+    {file = "urllib3-1.25.10-py2.py3-none-any.whl", hash = "sha256:e7983572181f5e1522d9c98453462384ee92a0be7fac5f1413a1e35c56cc0461"},
+    {file = "urllib3-1.25.10.tar.gz", hash = "sha256:91056c15fa70756691db97756772bb1eb9678fa585d9184f24534b100dc60f4a"},
+]
